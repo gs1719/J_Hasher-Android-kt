@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".String_Hasher"
+        android:background="@drawable/gradient_bg"
+
+>
+    <TextView
+            android:text="E  n  t  e  r    T  h  e    T  e  x  t \n  T  o    B  e    H  a  s  h  e  d"
+            android:layout_width="252dp"
+            android:layout_height="69dp" android:id="@+id/HsTxt"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="88dp"
+            app:layout_constraintHorizontal_bias="0.498" android:textSize="16sp" android:lineSpacingExtra="10sp"/>
+    <Spinner
+            android:layout_width="197dp"
+            android:layout_height="29dp" android:id="@+id/ASpinner"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/HsTxt" android:layout_marginTop="88dp"
+            android:background="#2C2B2B2B" android:spinnerMode="dialog"/>
+    <TextView
+            android:text="S e l e c t   A l g o r i t h m"
+            android:layout_width="206dp"
+            android:layout_height="46dp" android:id="@+id/AlgSelTxt"
+            app:layout_constraintTop_toBottomOf="@+id/ASpinner"
+            android:layout_marginTop="52dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" android:textColor="#202020"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:gravity="center"
+
+    />
+
+    <Button
+            android:text="  G  e  n  e  r  a  t  e    H  a  s  h  "
+            android:layout_width="214dp"
+            android:layout_height="51dp" android:id="@+id/GenSHBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.543"
+            android:lineSpacingExtra="8sp" android:background="#59808080" android:onClick="GenHash"
+            android:layout_marginBottom="56dp" app:layout_constraintTop_toBottomOf="@+id/inpTxt"
+            app:layout_constraintVertical_bias="0.461"/>
+    <Button
+            android:text="&lt;"
+            android:layout_width="65dp"
+            android:layout_height="62dp" android:id="@+id/bckBtn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="664dp" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="340dp" android:layout_marginRight="340dp" android:background="#1BF57C00"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" android:textStyle="bold"
+            android:onClick="GoBack"/>
+    <EditText
+            android:layout_width="330dp"
+            android:layout_height="118dp"
+            android:inputType="textMultiLine"
+            android:gravity="start|top"
+            android:ems="10"
+            android:id="@+id/inpTxt"
+            app:layout_constraintTop_toBottomOf="@+id/AlgSelTxt"
+            android:layout_marginTop="36dp" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.503"
+            android:hint="     E n t e r   T h e   T e x t   T o   B e   H a s h e d"
+            style="@style/Widget.AppCompat.AutoCompleteTextView"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:textColor="#353535"
+            android:lineSpacingExtra="8sp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
